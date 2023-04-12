@@ -14,10 +14,10 @@ use App\Http\Controllers\DownloadController;
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
+Route::get('/', function () {
+    return view('identification');
+});
 
 //Route::get('/download',[\App\Http\Controllers\DownloadController::class,'download'])->name('download.file');
 
-Route::get('/download',[DownloadController::class,'download'])->name('download.file');
+Route::post('/download',[DownloadController::class,'download'])->name('download.file');
