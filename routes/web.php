@@ -21,3 +21,6 @@ Route::get('/', function () {
 //Route::get('/download',[\App\Http\Controllers\DownloadController::class,'download'])->name('download.file');
 
 Route::post('/download',[DownloadController::class,'download'])->name('download.file');
+Route::get('/download', function () {
+    return view('identification');    
+});
